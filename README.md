@@ -24,17 +24,13 @@ source .profile
 Node Installation
 ```
 
-Node Name
-
-Your Node Name
-Port prefix
-
-216
-# Clone project repository
+**Clone project repository**
+```
 cd && rm -rf ojo
 git clone https://github.com/ojo-network/ojo
 cd ojo
 git checkout v0.1.2
+```
 
 # Build binary
 make install
