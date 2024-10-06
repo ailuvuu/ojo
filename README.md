@@ -32,8 +32,10 @@ cd ojo
 git checkout v0.1.2
 ```
 
-# Build binary
+**Build binary**
+``
 make install
+```
 
 # Prepare cosmovisor directories
 mkdir -p $HOME/.ojo/cosmovisor/genesis/bin
