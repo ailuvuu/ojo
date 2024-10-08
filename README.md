@@ -44,8 +44,10 @@ sudo ln -s $HOME/.ojo/cosmovisor/genesis $HOME/.ojo/cosmovisor/current -f
 sudo ln -s $HOME/.ojo/cosmovisor/current/bin/ojod /usr/local/bin/ojod -f
 ```
 
-# Move binary to cosmovisor directory
+**Move binary to cosmovisor directory**
+```
 mv $(which ojod) $HOME/.ojo/cosmovisor/genesis/bin
+```
 
 # Set node CLI configuration
 ojod config chain-id ojo-devnet
