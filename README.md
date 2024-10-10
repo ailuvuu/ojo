@@ -49,10 +49,12 @@ sudo ln -s $HOME/.ojo/cosmovisor/current/bin/ojod /usr/local/bin/ojod -f
 mv $(which ojod) $HOME/.ojo/cosmovisor/genesis/bin
 ```
 
-# Set node CLI configuration
+**Set node CLI configuration**
+```
 ojod config chain-id ojo-devnet
 ojod config keyring-backend test
 ojod config node tcp://localhost:21657
+```
 
 # Initialize the node
 ojod init "Your Node Name" --chain-id ojo-devnet
