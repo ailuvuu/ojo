@@ -56,8 +56,10 @@ ojod config keyring-backend test
 ojod config node tcp://localhost:21657
 ```
 
-# Initialize the node
+**Initialize the node**
+```
 ojod init "Your Node Name" --chain-id ojo-devnet
+```
 
 # Download genesis and addrbook files
 curl -L https://snapshots-testnet.nodejumper.io/ojo/genesis.json > $HOME/.ojo/config/genesis.json
