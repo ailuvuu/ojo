@@ -61,9 +61,11 @@ ojod config node tcp://localhost:21657
 ojod init "Your Node Name" --chain-id ojo-devnet
 ```
 
-# Download genesis and addrbook files
+**Download genesis and addrbook files**
+```
 curl -L https://snapshots-testnet.nodejumper.io/ojo/genesis.json > $HOME/.ojo/config/genesis.json
 curl -L https://snapshots-testnet.nodejumper.io/ojo/addrbook.json > $HOME/.ojo/config/addrbook.json
+```
 
 # Set seeds
 sed -i -e 's|^seeds *=.*|seeds = "7186f24ace7f4f2606f56f750c2684d387dc39ac@ojo-testnet-seed.itrocket.net:12656"|' $HOME/.ojo/config/config.toml
