@@ -72,8 +72,10 @@ curl -L https://snapshots-testnet.nodejumper.io/ojo/addrbook.json > $HOME/.ojo/c
 sed -i -e 's|^seeds *=.*|seeds = "7186f24ace7f4f2606f56f750c2684d387dc39ac@ojo-testnet-seed.itrocket.net:12656"|' $HOME/.ojo/config/config.toml
 ```
 
-# Set minimum gas price
+**Set minimum gas price**
+```
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.01uojo"|' $HOME/.ojo/config/app.toml
+```
 
 # Set pruning
 sed -i \
