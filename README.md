@@ -77,12 +77,14 @@ sed -i -e 's|^seeds *=.*|seeds = "7186f24ace7f4f2606f56f750c2684d387dc39ac@ojo-t
 sed -i -e 's|^minimum-gas-prices *=.*|minimum-gas-prices = "0.01uojo"|' $HOME/.ojo/config/app.toml
 ```
 
-# Set pruning
+**Set pruning**
+```
 sed -i \
   -e 's|^pruning *=.*|pruning = "custom"|' \
   -e 's|^pruning-keep-recent *=.*|pruning-keep-recent = "100"|' \
   -e 's|^pruning-interval *=.*|pruning-interval = "17"|' \
   $HOME/.ojo/config/app.toml
+```
 
 # Change ports
 sed -i -e "s%:1317%:21617%; s%:8080%:21680%; s%:9090%:21690%; s%:9091%:21691%; s%:8545%:21645%; s%:8546%:21646%; s%:6065%:21665%" $HOME/.ojo/config/app.toml
