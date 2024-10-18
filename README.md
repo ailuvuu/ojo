@@ -92,8 +92,10 @@ sed -i -e "s%:1317%:21617%; s%:8080%:21680%; s%:9090%:21690%; s%:9091%:21691%; s
 sed -i -e "s%:26658%:21658%; s%:26657%:21657%; s%:6060%:21660%; s%:26656%:21656%; s%:26660%:21661%" $HOME/.ojo/config/config.toml
 ```
 
-# Download latest chain data snapshot
+**Download latest chain data snapshot**
+```
 curl "https://snapshots-testnet.nodejumper.io/ojo/ojo-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.ojo"
+```
 
 # Install Cosmovisor
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
