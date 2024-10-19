@@ -97,8 +97,10 @@ sed -i -e "s%:26658%:21658%; s%:26657%:21657%; s%:6060%:21660%; s%:26656%:21656%
 curl "https://snapshots-testnet.nodejumper.io/ojo/ojo-testnet_latest.tar.lz4" | lz4 -dc - | tar -xf - -C "$HOME/.ojo"
 ```
 
-# Install Cosmovisor
+**Install Cosmovisor**
+```
 go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@v1.6.0
+```
 
 # Create a service
 sudo tee /etc/systemd/system/ojo.service > /dev/null << EOF
