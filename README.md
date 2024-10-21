@@ -126,10 +126,12 @@ sudo systemctl daemon-reload
 sudo systemctl enable ojo.service
 ```
 
-# Start the service and check the logs
+**Start the service and check the logs**
+```
 sudo systemctl start ojo.service
 sudo journalctl -u ojo.service -f --no-hostname -o cat
 Create Validator
+```
 
 # create wallet
 ojod keys add wallet
