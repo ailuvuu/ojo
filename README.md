@@ -133,9 +133,10 @@ sudo journalctl -u ojo.service -f --no-hostname -o cat
 Create Validator
 ```
 
-# create wallet
+**create wallet**
+```
 ojod keys add wallet
-
+```
 ## console output:
 #- name: wallet
 #  type: local
