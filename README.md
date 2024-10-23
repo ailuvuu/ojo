@@ -1,13 +1,12 @@
-Hardware Requirements
-
-Minimum
-
+**Hardware Requirements**
+```
 4CPU 8RAM 100GB
 Recommended
 
 4CPU 16RAM 200GB
 Rent On Hetzner | Rent On OVH
-Dependencies Installation
+```
+
 
 **Install dependencies for building from source**
 ```
