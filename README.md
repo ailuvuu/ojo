@@ -146,8 +146,10 @@ ojod keys add wallet
 #  mnemonic: ""
 ```
 
-#!!! SAVE SEED PHRASE
+**SAVE SEED PHRASE**
+```
 kite upset hip dirt pet winter thunder slice parent flag sand express suffer chest custom pencil mother bargain remember patient other curve cancel sweet
+```
 
 #!!! SAVE PRIVATE VALIDATOR KEY
 cat $HOME/.ojo/config/priv_validator_key.json
