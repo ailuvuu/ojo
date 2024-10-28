@@ -185,8 +185,10 @@ ojod tx staking create-validator \
 --from=wallet \
 -y
 
-# make sure you see the validator details
+**make sure you see the validator details**
+```
 ojod q staking validator $(ojod keys show wallet --bech val -a)
+```
 
 # install pricefeeder
 cd || return
