@@ -156,8 +156,10 @@ kite upset hip dirt pet winter thunder slice parent flag sand express suffer che
 cat $HOME/.ojo/config/priv_validator_key.json
 ```
 
-# wait util the node is synced, should return FALSE
+**wait util the node is synced, should return FALSE**
+```
 ojod status 2>&1 | jq .SyncInfo.catching_up
+```
 
 # Request tokens in discord
 
