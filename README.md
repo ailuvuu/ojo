@@ -139,11 +139,11 @@ ojod keys add wallet
 
 **console output**
 ```
-#- name: wallet
-#  type: local
-#  address: ojo1ela8c0jhqgjsj2cq7twu9uhda2n8e6cs8ztxs3
-#  pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Auq9WzVEs5pCoZgr2WctjI7fU+lJCH0I3r6GC1oa0tc0"}'
-#  mnemonic: ""
+name: wallet
+type: local
+address: ojo1ela8c0jhqgjsj2cq7twu9uhda2n8e6cs8ztxs3
+pubkey: '{"@type":"/cosmos.crypto.secp256k1.PubKey","key":"Auq9WzVEs5pCoZgr2WctjI7fU+lJCH0I3r6GC1oa0tc0"}'
+mnemonic: ""
 ```
 
 **SAVE SEED PHRASE**
@@ -151,7 +151,7 @@ ojod keys add wallet
 kite upset hip dirt pet winter thunder slice parent flag sand express suffer chest custom pencil mother bargain remember patient other curve cancel sweet
 ```
 
-**!!! SAVE PRIVATE VALIDATOR KEY**
+**SAVE PRIVATE VALIDATOR KEY**
 ```
 cat $HOME/.ojo/config/priv_validator_key.json
 ```
@@ -161,10 +161,12 @@ cat $HOME/.ojo/config/priv_validator_key.json
 ojod status 2>&1 | jq .SyncInfo.catching_up
 ```
 
-# Request tokens in discord
+**Request tokens in discord**
 
-# verify the balance
+**verify the balance**
+```
 ojod q bank balances $(ojod keys show wallet -a)
+```
 
 ## console output:
 #  balances:
