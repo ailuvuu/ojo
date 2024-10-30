@@ -168,10 +168,12 @@ ojod status 2>&1 | jq .SyncInfo.catching_up
 ojod q bank balances $(ojod keys show wallet -a)
 ```
 
-## console output:
-#  balances:
-#  - amount: "10000000"
-#    denom: uojo
+**console output**
+```
+  balances:
+  - amount: "10000000"
+    denom: uojo
+```
 
 # create validator
 ojod tx staking create-validator \
