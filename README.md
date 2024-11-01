@@ -175,7 +175,8 @@ ojod q bank balances $(ojod keys show wallet -a)
     denom: uojo
 ```
 
-# create validator
+**create validator**
+```
 ojod tx staking create-validator \
 --amount=9000000uojo \
 --pubkey=$(ojod tendermint show-validator) \
@@ -188,6 +189,7 @@ ojod tx staking create-validator \
 --fees=2000uojo \
 --from=wallet \
 -y
+```
 
 **make sure you see the validator details**
 ```
