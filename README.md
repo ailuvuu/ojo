@@ -196,7 +196,8 @@ ojod tx staking create-validator \
 ojod q staking validator $(ojod keys show wallet --bech val -a)
 ```
 
-# install pricefeeder
+**install pricefeeder**
+```
 cd || return
 rm -rf price-feeder
 git clone https://github.com/ojo-network/price-feeder
@@ -204,9 +205,9 @@ cd price-feeder || return
 git checkout v0.1.1
 make install
 price-feeder version # version: HEAD-5d46ed438d33d7904c0d947ebc6a3dd48ce0de59
-
 mkdir -p $HOME/.price-feeder
 curl -s https://raw.githubusercontent.com/ojo-network/price-feeder/main/price-feeder.example.toml > $HOME/.price-feeder/price-feeder.toml
+```
 
 ojod keys add feeder-wallet --keyring-backend os
 ojod tx bank send wallet YOUR_FEEDER_ADDRESS 10000000uojo --from wallet --chain-id ojo-devnet --fees 2000uojo -y
