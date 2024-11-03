@@ -207,11 +207,11 @@ make install
 price-feeder version # version: HEAD-5d46ed438d33d7904c0d947ebc6a3dd48ce0de59
 mkdir -p $HOME/.price-feeder
 curl -s https://raw.githubusercontent.com/ojo-network/price-feeder/main/price-feeder.example.toml > $HOME/.price-feeder/price-feeder.toml
-```
 
 ojod keys add feeder-wallet --keyring-backend os
 ojod tx bank send wallet YOUR_FEEDER_ADDRESS 10000000uojo --from wallet --chain-id ojo-devnet --fees 2000uojo -y
 ojod q bank balances $(ojod keys show feeder-wallet --keyring-backend os -a)
+```
 
 CHAIN_ID=ojo-devnet
 KEYRING_PASSWORD=YOUR_KEYRING_PASSWORD
@@ -224,6 +224,7 @@ RPC="http://localhost:26657"
 ojod tx oracle delegate-feed-consent $WALLET_ADDRESS $FEEDER_ADDRESS --from wallet --fees 2000uojo -y
 ojod q oracle feeder-delegation $VALIDATOR_ADDRESS
 
+```
 sed -i '/^dir *=.*/a pass = ""' $HOME/.price-feeder/price-feeder.toml
 sed -i 's|^address *=.*|address = "'$FEEDER_ADDRESS'"|g' $HOME/.price-feeder/price-feeder.toml
 sed -i 's|^chain_id *=.*|chain_id = "'$CHAIN_ID'"|g' $HOME/.price-feeder/price-feeder.toml
@@ -234,6 +235,8 @@ sed -i 's|^pass *=.*|pass = "'$KEYRING_PASSWORD'"|g' $HOME/.price-feeder/price-f
 sed -i 's|^grpc_endpoint *=.*|grpc_endpoint = "'$GRPC'"|g' $HOME/.price-feeder/price-feeder.toml
 sed -i 's|^tmrpc_endpoint *=.*|tmrpc_endpoint = "'$RPC'"|g' $HOME/.price-feeder/price-feeder.toml
 sed -i 's|^global-labels *=.*|global-labels = [["chain_id", "'$CHAIN_ID'"]]|g' $HOME/.price-feeder/price-feeder.toml
+```
+
 
 sudo tee /etc/systemd/system/price-feeder.service > /dev/null << EOF
 [Unit]
