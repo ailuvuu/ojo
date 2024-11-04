@@ -237,7 +237,7 @@ sed -i 's|^tmrpc_endpoint *=.*|tmrpc_endpoint = "'$RPC'"|g' $HOME/.price-feeder/
 sed -i 's|^global-labels *=.*|global-labels = [["chain_id", "'$CHAIN_ID'"]]|g' $HOME/.price-feeder/price-feeder.toml
 ```
 
-
+```
 sudo tee /etc/systemd/system/price-feeder.service > /dev/null << EOF
 [Unit]
 Description=Ojo Price Feeder
@@ -252,6 +252,7 @@ Environment="PRICE_FEEDER_PASS=$KEYRING_PASSWORD"
 [Install]
 WantedBy=multi-user.target
 EOF
+```
 
 sudo systemctl daemon-reload
 sudo systemctl enable price-feeder
