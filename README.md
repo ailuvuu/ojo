@@ -213,6 +213,7 @@ ojod tx bank send wallet YOUR_FEEDER_ADDRESS 10000000uojo --from wallet --chain-
 ojod q bank balances $(ojod keys show feeder-wallet --keyring-backend os -a)
 ```
 
+```
 CHAIN_ID=ojo-devnet
 KEYRING_PASSWORD=YOUR_KEYRING_PASSWORD
 WALLET_ADDRESS=$(ojod keys show wallet -a)
@@ -225,6 +226,8 @@ ojod tx oracle delegate-feed-consent $WALLET_ADDRESS $FEEDER_ADDRESS --from wall
 ojod q oracle feeder-delegation $VALIDATOR_ADDRESS
 
 ```
+
+
 sed -i '/^dir *=.*/a pass = ""' $HOME/.price-feeder/price-feeder.toml
 sed -i 's|^address *=.*|address = "'$FEEDER_ADDRESS'"|g' $HOME/.price-feeder/price-feeder.toml
 sed -i 's|^chain_id *=.*|chain_id = "'$CHAIN_ID'"|g' $HOME/.price-feeder/price-feeder.toml
@@ -265,8 +268,11 @@ Secure Server Setup (Optional)
 ssh-keygen -t rsa
 ```
 
-# save the output, we'll use it later on instead of YOUR_PUBLIC_SSH_KEY
+**save the output, we'll use it later on instead of YOUR_PUBLIC_SSH_KEY**
+```
 cat ~/.ssh/id_rsa.pub
+```
+
 # upgrade system packages
 sudo apt update
 sudo apt upgrade -y
