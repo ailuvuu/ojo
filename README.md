@@ -32,7 +32,7 @@ git checkout v0.1.2
 ```
 
 **Build binary**
-``
+```
 make install
 ```
 
